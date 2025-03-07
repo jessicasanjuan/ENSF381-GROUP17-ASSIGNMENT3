@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Course View - LMS</title>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
+        <h1>LMS - Learning Management System</h1>
+    </header>
+    <div class="menu">
+        <nav>
+            <a href="index.html" class="menu-link">Homepage</a>
+        </nav>
+    </div>
+    <br>
+    <main>
+        <div class="dropdown-container">
+            <label for="term">Select Term:</label>
+            <select id="term" name="term" class="dropdown-item">
+                <option value="Winter 2025">Winter 2025</option>
+                <option value="Winter 2024">Winter 2024</option>
+                <option value="Fall 2025">Fall 2025</option>
+                <option value="Fall 2024">Fall 2024</option>
+            </select>    
+        </div>
+        
+        <section class="Enrolled">
+            <h2>Enrolled Courses</h2>
+            <hr>
+            <br>
+            <div class="course-container">
+                <div class="course">
+                    <img src="course1.jpg" alt="Course 1" class="course2-img">
+                    <p>Course Name: Web Development</p>
+                    <p>Course Code: WD381</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+                        
+                <div class="course">
+                    <img src="course1.jpg" alt="Course 1" class="course2-img">
+                    <p>Course Name: Data Structures</p>
+                    <p>Course Code: DS371</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+                    
+                <div class="course">
+                    <img src="course1.jpg" alt="Course 1" class="course2-img">
+                    <p>Course Name: Database Systems</p>
+                    <p>Course Code: DB346</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+            </div>
+            <div class="course-container">
+                <div class="course">
+                    <img src="course1.jpg" alt="Course 1" class="course2-img">
+                    <p>Course Name: Software Testing</p>
+                    <p>Course Code: ST484</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+    
+                <div class="course">
+                    <img src="course1.jpg" alt="Course 1" class="course2-img">
+                    <p>Course Name: Software Architectures</p>
+                    <p>Course Code: SA396</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+            </div>
+            
+			
+        </section>
+        <br>
+        <br>
+        <section class="Enrolled">
+			
+            <h2>Pending Invitations</h2>
+            <hr>
+			<div class="course-container">
+                <div class="course2">
+                    <img src="course2.jpg" alt="Course 2" class="course2-img">
+                    <p>Course Name: Data Science</p>
+                    <p>Course Code: DS102</p>
+                    <button class="accept-button">Accept</button>
+                    <button class="decline-button">Decline</button>
+                </div>
+                        
+                <div class="course2">
+                    <img src="course2.jpg" alt="Course 2" class="course2-img">
+                    <p>Course Name: Machine Learning</p>
+                    <p>Course Code: ML105</p>
+                    <button class="accept-button">Accept</button>
+                    <button class="decline-button">Decline</button>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+</body>
+</html>

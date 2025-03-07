@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-witdth, initial-scale=1.0">
+        <title>Attempt Quiz - LMS</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <img src="logo.jpg" style="width: 100px; height: 100px;"></img>
+            <h1>LMS - Learning Management System</h1>
+        </header>
+
+        <div class="menu">
+            <a href="index.html" class="menu-link">Homepage</a> <a href="course_view.html" class="menu-link">Courses</a>
+        </div>
+
+        <br>
+        <br>
+
+        <main class="center-align">
+            <img src="banner.jpg" alt="Quiz Time" width="100%" height="150px" class="quiz-banner">
+
+            <div class="quiz-container">
+                <h2>Course Name: Web Development</h2>
+                <h2>Course Code: WD381</h2>
+            </div>
+
+            <div class="quiz-container">
+                <p>Topic: HTML Basics</p>
+                <p>Deadline: 11:59 PM, February 10, 2025</p>
+                <p>Attempts Allowed: 1</p>
+            </div>
+
+        
+            <div class="center-align">
+                <h3 class="quiz-questions">Question 1</h3>
+                <p>What does HTML stand for?</p>
+                <div class="quiz-choices">
+                    <input type="radio" name="q1" id="q1a" value="Hyper Text Markup Language">
+                    <label for="q1a">Hyper Text Markup Language </label><br>
+                    <input type="radio" name="q1" id="q1b" value="Home Tool Markup Language">
+                    <label for="q1b">Home Tool Markup Language</label><br>
+                </div>
+                <br>
+                <button class="quiz-submit">Submit Answer</button>
+            </div>
+     
+    
+            <div class="center-align">
+                <h3 class="quiz-questions">Question 2</h3>
+                <p>Which of the following are HTML elements? (Select all that apply)</p>
+                <div class="quiz-choices">
+                    <input type="checkbox" id="q2a" name="q2" value="<div>">
+                    <label for="q2a">&lt;div&gt;</label><br>
+                    <input type="checkbox" id="q2b" name="q2" value="<span>">
+                    <label for="q2b">&lt;span&gt;</label><br>
+                </div>
+                <br>
+                <button class="quiz-submit">Submit Answer</button>
+            </div>
+
+            <br>
+            <form class="center-align">
+                <button type="submit" formaction="leaderboard.html" class="quiz-finish">Finish Quiz</button>
+                
+            </form>
+
+        </main>
+        <br>
+
+        <footer>
+            © 2025 LMS. All rights reserved.
+        </footer>
+    </body>
+</html>
