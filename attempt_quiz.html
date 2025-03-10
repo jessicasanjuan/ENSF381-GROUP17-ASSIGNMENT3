@@ -23,21 +23,63 @@
             }
             window.onload = startTimer;
 
-            let score = 0;
-
             function validateQ1()
             {
+                // if there selected option
                 let q1a = document.getElementById("q1a").checked;
                 let q1b = document.getElementById("q1b").checked;
 
+                // check if there is any selection
                 if(!q1a && !q1b)
                 {
                     alert("Please answer Question 1!");
                     return;
                 }
                 
+                if(q1a)
+                {
+                    return true;
+                }
 
+                if(q1b)
+                {
+                    return true;
+                }
 
+            }
+
+            function validateQ2()
+            {
+                let q2a = document.getElementById("q2a").checked;
+                let q2b = document.getElementById("q2b").checked;
+
+                if(!q2a && !q2b)
+                {
+                    alert("Please answer Question 2!");
+                    return;
+                }
+                if(q2a)
+                {
+                    return true;
+                }
+                if(q2b)
+                {
+                    return true;
+                }
+            }
+            function calculateScore() 
+            {
+                let score = 0;
+                if (document.getElementById("q1a").checked) {
+                    score += 50;
+                }
+                if (document.getElementById("q2a").checked) {
+                    score += 25;
+                }
+                if (document.getElementById("q2b").checked) {
+                    score += 25;
+                }
+                alert("Your final score is: " + score + "/100");
             }
         </script>
     </head>
@@ -94,14 +136,12 @@
                     <label for="q2b">&lt;span&gt;</label><br>
                 </div>
                 <br>
-                <button class="quiz-submit">Submit Answer</button>
+                <button class="quiz-submit" onclick="validateQ2()">Submit Answer</button>
             </div>
 
             <br>
-            <form class="center-align">
-                <button type="submit" formaction="leaderboard.html" class="quiz-finish">Finish Quiz</button>
+            <button type="submit" class="quiz-finish" onclick="calculateScore()">Finish Quiz</button>
                 
-            </form>
 
         </main>
         <br>
