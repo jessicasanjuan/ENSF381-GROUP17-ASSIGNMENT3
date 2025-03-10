@@ -5,6 +5,14 @@
         <meta name="viewport" content="width=device-witdth, initial-scale=1.0">
         <title>Login - LMS</title>
         <link rel="stylesheet" href="styles.css">
+        <script>
+            async function validateLogin(event) 
+            {
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let messageBox = document.getElementById("message-box");
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -39,6 +47,8 @@
             <a href="login.html" id="forgot-password">Forgot Password?</a>
             <br>
             <a href="signup.html" id="signup">Don't have an account? Sign Up</a>
+
+            <div id="message-box"></div>
             <br><br><br>
         </main>
         
