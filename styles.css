@@ -110,7 +110,18 @@ footer
     background-color: #45a049;
     opacity: 1;
 }
-
+/* for login and sign up pages*/
+#message-box
+{
+    color: black;
+    padding: 15px;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+}
 .dropdown-item
 {
     background-color: lightyellow;

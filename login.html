@@ -12,16 +12,8 @@
                 let username = document.getElementById("username").value.trim();
                 let password = document.getElementById("password").value.trim();
                 let messageBox = document.getElementById("message-box");
-        
-                // Ensure message box is styled properly
+
                 messageBox.style.border = "2px solid black";
-                messageBox.style.padding = "15px";
-                messageBox.style.marginTop = "20px";
-                messageBox.style.width = "80%";
-                messageBox.style.textAlign = "center";
-                messageBox.style.fontSize = "16px";
-                messageBox.style.backgroundColor = "#f9f9f9";
-                messageBox.style.margin = "20px auto";
         
                 try {
                     // Fetch users from API
@@ -38,7 +30,6 @@
                     let user = users.find(u => u.username.toLowerCase() === username.toLowerCase());
         
                     if (user && user.email === password) { // Using email as password
-                        messageBox.style.color = "black";
                         messageBox.innerHTML = "Login successful! Redirecting...";
         
                         // Ensure page redirection after 2 seconds
@@ -46,11 +37,9 @@
                             window.location.href = "course_view.html";
                         }, 2000);
                     } else {
-                        messageBox.style.color = "black";
                         messageBox.innerHTML = "Invalid username or password.";
                     }
                 } catch (error) {
-                    messageBox.style.color = "black";
                     messageBox.innerHTML = "Error fetching user data. Please try again.";
                     console.error("Login Error:", error);
                 }
