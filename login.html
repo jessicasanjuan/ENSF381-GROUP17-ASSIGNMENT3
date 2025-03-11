@@ -6,13 +6,57 @@
         <title>Login - LMS</title>
         <link rel="stylesheet" href="styles.css">
         <script>
-            async function validateLogin(event) 
-            {
-                let username = document.getElementById("username").value;
-                let password = document.getElementById("password").value;
+            async function validateLogin(event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                let username = document.getElementById("username").value.trim();
+                let password = document.getElementById("password").value.trim();
                 let messageBox = document.getElementById("message-box");
+        
+                // Ensure message box is styled properly
+                messageBox.style.border = "2px solid black";
+                messageBox.style.padding = "15px";
+                messageBox.style.marginTop = "20px";
+                messageBox.style.width = "80%";
+                messageBox.style.textAlign = "center";
+                messageBox.style.fontSize = "16px";
+                messageBox.style.backgroundColor = "#f9f9f9";
+                messageBox.style.margin = "20px auto";
+        
+                try {
+                    // Fetch users from API
+                    let response = await fetch("https://jsonplaceholder.typicode.com/users");
+                    
+                    // Check if fetch was successful
+                    if (!response.ok) {
+                        throw new Error("Failed to fetch user data");
+                    }
+        
+                    let users = await response.json();
+        
+                    // Find user based on username
+                    let user = users.find(u => u.username.toLowerCase() === username.toLowerCase());
+        
+                    if (user && user.email === password) { // Using email as password
+                        messageBox.style.color = "black";
+                        messageBox.innerHTML = "Login successful! Redirecting...";
+        
+                        // Ensure page redirection after 2 seconds
+                        setTimeout(() => {
+                            window.location.href = "course_view.html";
+                        }, 2000);
+                    } else {
+                        messageBox.style.color = "black";
+                        messageBox.innerHTML = "Invalid username or password.";
+                    }
+                } catch (error) {
+                    messageBox.style.color = "black";
+                    messageBox.innerHTML = "Error fetching user data. Please try again.";
+                    console.error("Login Error:", error);
+                }
             }
         </script>
+        
     </head>
     <body>
         <header>
@@ -29,7 +73,7 @@
             <br>
             <h2>LMS Login</h2>
             
-            <form action="course_view.html">
+            <form onsubmit="validateLogin(event)">
                 <div id="login-form">
                     <label for="username">Username:</label> 
                     <br>
